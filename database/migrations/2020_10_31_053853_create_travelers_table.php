@@ -17,7 +17,7 @@ class CreateTravelersTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->date('birt');
-            $table->enum('gender',['Female','Male']);
+            $table->enum('gender',['F','M']);
             $table->text('address');
             $table->unsignedBigInteger('country');
             $table->text('bio')->nullable();

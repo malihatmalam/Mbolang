@@ -17,8 +17,8 @@ class CreateGuidesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->date('birt');
-            $table->enum('gender',['Female','Male']);
-            $table->boolean('status');
+            $table->enum('gender',['F','M']);
+            $table->boolean('status')->default(true);
             $table->text('address');
             $table->unsignedBigInteger('country');
             $table->longText('description')->nullable();

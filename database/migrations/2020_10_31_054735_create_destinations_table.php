@@ -22,7 +22,7 @@ class CreateDestinationsTable extends Migration
             $table->text('address');
             $table->unsignedBigInteger('city');
             $table->unsignedBigInteger('province');
-            $table->unsignedBigInteger('country');
+            //$table->unsignedBigInteger('country');
             $table->double('latitude',10,7);
             $table->double('longitude',10,7 );
             $table->timestamps();

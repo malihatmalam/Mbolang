@@ -19,7 +19,7 @@ class CreatePhoneGuidesTable extends Migration
             $table->unsignedBigInteger('id_guide');
             $table->foreign('id_guide')->references('id')->on('guides');
             
-            $table->integer('phone');
+            $table->string('phone');
             $table->timestamps();
         });
     }
