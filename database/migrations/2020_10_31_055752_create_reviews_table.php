@@ -25,7 +25,7 @@ class CreateReviewsTable extends Migration
             $table->unsignedBigInteger('id_rating');
             $table->foreign('id_rating')->references('id')->on('ratings');
             
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }

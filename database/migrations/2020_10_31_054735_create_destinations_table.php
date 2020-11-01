@@ -18,7 +18,7 @@ class CreateDestinationsTable extends Migration
             $table->string('name');
             $table->string('time');
             $table->string('ticket');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->text('address');
             $table->unsignedBigInteger('city');
             $table->unsignedBigInteger('province');

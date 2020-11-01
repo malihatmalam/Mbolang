@@ -21,7 +21,7 @@ class CreateGuidesTable extends Migration
             $table->boolean('status');
             $table->text('address');
             $table->unsignedBigInteger('country');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->timestamps();
         });
     }
