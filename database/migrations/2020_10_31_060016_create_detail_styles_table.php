@@ -15,6 +15,13 @@ class CreateDetailStylesTable extends Migration
     {
         Schema::create('detail_styles', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('id_traveler');
+            $table->foreign('id_traveler')->references('id')->on('travelers');
+            
+            $table->unsignedBigInteger('id_style');
+            $table->foreign('id_style')->references('id')->on('styles');
+            
             $table->timestamps();
         });
     }

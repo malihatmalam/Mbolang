@@ -15,6 +15,12 @@ class CreateTravelersTable extends Migration
     {
         Schema::create('travelers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->date('birt');
+            $table->enum('gender',['Female','Male']);
+            $table->text('address');
+            $table->unsignedBigInteger('country');
+            $table->text('bio');
             $table->timestamps();
         });
     }

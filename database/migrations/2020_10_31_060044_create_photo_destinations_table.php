@@ -15,6 +15,11 @@ class CreatePhotoDestinationsTable extends Migration
     {
         Schema::create('photo_destinations', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('id_destination');
+            $table->foreign('id_destination')->references('id')->on('destinations');
+            
+            $table->string('photo');
             $table->timestamps();
         });
     }

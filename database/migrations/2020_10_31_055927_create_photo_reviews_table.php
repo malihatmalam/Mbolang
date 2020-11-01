@@ -15,6 +15,12 @@ class CreatePhotoReviewsTable extends Migration
     {
         Schema::create('photo_reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('id_review');
+            $table->foreign('id_review')->references('id')->on('reviews');
+            
+            $table->string('photo');
+
             $table->timestamps();
         });
     }

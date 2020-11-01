@@ -15,8 +15,10 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
+
             $table->unsignedBigInteger('id_guide');
             $table->foreign('id_guide')->references('id')->on('guides');
+            
             $table->string('title');
             $table->longText('detail');
             $table->string('photo');

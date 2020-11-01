@@ -15,6 +15,11 @@ class CreatePhoneGuidesTable extends Migration
     {
         Schema::create('phone_guides', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('id_guide');
+            $table->foreign('id_guide')->references('id')->on('guides');
+            
+            $table->integer('phone');
             $table->timestamps();
         });
     }

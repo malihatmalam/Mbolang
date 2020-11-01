@@ -15,6 +15,16 @@ class CreateDestinationsTable extends Migration
     {
         Schema::create('destinations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('time');
+            $table->string('ticket');
+            $table->longText('description');
+            $table->text('address');
+            $table->unsignedBigInteger('city');
+            $table->unsignedBigInteger('province');
+            $table->unsignedBigInteger('country');
+            $table->double('latitude',10,7);
+            $table->double('longitude',10,7 );
             $table->timestamps();
         });
     }

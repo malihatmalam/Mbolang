@@ -15,6 +15,13 @@ class CreateDetailCategoriesTable extends Migration
     {
         Schema::create('detail_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
+
+            $table->unsignedBigInteger('id_destination');
+            $table->foreign('id_destination')->references('id')->on('destinations');
+
+            $table->unsignedBigInteger('id_category');
+            $table->foreign('id_category')->references('id')->on('categories');
+
             $table->timestamps();
         });
     }

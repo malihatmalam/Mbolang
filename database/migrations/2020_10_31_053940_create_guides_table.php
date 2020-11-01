@@ -20,7 +20,7 @@ class CreateGuidesTable extends Migration
             $table->enum('gender',['Female','Male']);
             $table->boolean('status');
             $table->text('address');
-            $table->bigInteger('country');
+            $table->unsignedBigInteger('country');
             $table->longText('description');
             $table->timestamps();
         });
