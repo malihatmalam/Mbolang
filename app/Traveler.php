@@ -17,4 +17,10 @@ class Traveler extends Model
         'country',
         'bio'     
     ];
+
+    public function Country()
+    {
+        return $this->hasOne('App\Country');
+    }
+
 }

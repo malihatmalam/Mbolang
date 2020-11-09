@@ -15,7 +15,9 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('province_id'); //FIELD INI AKAN MERUJUK KE TABLE provinces
+            
+            //FIELD INI AKAN MERUJUK KE TABLE provinces 
+            $table->unsignedBigInteger('id_province'); 
             $table->string('name');
             $table->string('type');
             $table->string('postal_code');
